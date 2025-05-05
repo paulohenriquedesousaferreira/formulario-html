@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Cadastro</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Cadastre-se no MCMV</h2>
+        <h5>(Minha Casa Minha Vida)</h5>
+        <form action="http://127.0.0.1:5000/enviar" method="POST">
+            <label for="nome">Nome Completo:</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+
+            <label for="telefone">Telefone:</label>
+            <input type="text" id="telefone" name="telefone" placeholder="Digite seu telefone" required>
+
+            <label for="dataNascimento">Data de Nascimento:</label>
+            <input type="date" id="dataNascimento" name="dataNascimento" required>
+
+            <label for="estadoCivil">Estado Civil:</label>
+            <select id="estadoCivil" name="estadoCivil" required>
+                <option value="escolha-uma-opção" selected disabled>Escolha uma opção:</option>
+                <option value="solteiro">Solteiro(a)</option>
+                <option value="casado">Casado(a)</option>
+                <option value="divorciado">Divorciado(a)</option>
+                <option value="viuvo">Viúvo(a)</option>
+            </select>
+
+            <label for="cpf">CPF:</label>
+            <input type="text" id="cpf" name="cpf" placeholder="Digite seu CPF" required>
+
+            <label for="fgts">Você tem mais de 3 anos de contribuição de FGTS?</label>
+            <select id="fgts" name="fgts" required>
+                <option value="escolha-uma-opção" selected disabled>Escolha uma opção:</option>
+                <option value="sim">Sim</option>
+                <option value="nao">Não</option>
+            </select>
+
+            <label for="filhos">Você tem filhos?</label>
+            <select id="filhos" name="filhos" required>
+                <option value="escolha-uma-opção" selected disabled>Escolha uma opção:</option>
+                <option value="nenhum">Nenhum</option>
+                <option value="1filho">1 Filho</option>
+                <option value="2filho">2 Filhos</option>
+                <option value="3filho">3 ou mais filhos</option>
+            </select>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</body>
+
+</html>
